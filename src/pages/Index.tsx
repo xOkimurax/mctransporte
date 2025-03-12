@@ -1,8 +1,7 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Truck, ShieldCheck, Clock, Award } from "lucide-react";
-import { services, testimonials } from "@/assets/data";
+import { services } from "@/assets/data";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTA from "@/components/CTA";
@@ -21,13 +20,13 @@ const Index = () => {
             <div className="text-center lg:text-left">
               <ScrollReveal direction="left">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-mc-dark leading-tight mb-6">
-                  Transporte y Mudanzas con Profesionalismo y Seguridad
+                  Fletes y Mudanzas con Profesionalismo y Seguridad
                 </h1>
               </ScrollReveal>
               
               <ScrollReveal direction="left" delay={200}>
                 <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-                  Servicio completo de mudanzas y transporte para particulares y empresas en todo Paraguay.
+                  Servicio completo de mudanzas y Fletes para particulares y empresas en todo Paraguay.
                 </p>
               </ScrollReveal>
               
@@ -54,8 +53,8 @@ const Index = () => {
               <div className="relative">
                 <div className="rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.02]">
                   <img 
-                    src="/src/assets/hero-image.jpg" 
-                    alt="MC Transporte y Mudanzas" 
+                    src="/src/assets/camionTransporte.jpeg" 
+                    alt="MC Fletes y Mudanzas" 
                     className="w-full h-auto object-cover"
                     style={{ aspectRatio: "4/3" }}
                   />
@@ -69,7 +68,7 @@ const Index = () => {
                     </div>
                     <span className="ml-2 font-bold text-mc-dark">100% Seguro</span>
                   </div>
-                  <p className="text-sm text-gray-600">Transporte protegido para todos sus bienes</p>
+                  <p className="text-sm text-gray-600">Fletes protegido para todos sus bienes</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -82,12 +81,12 @@ const Index = () => {
       </section>
       
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="container-custom">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-mc-dark mb-4">
-                ¿Por Qué Elegir <span className="text-mc-primary">MC Transporte</span>?
+                ¿Por Qué Elegir <span className="text-mc-primary">MC Fletes Y Mudanzas</span>?
               </h2>
               <p className="text-gray-600 text-lg">
                 Ofrecemos soluciones integrales adaptadas a sus necesidades específicas con los más altos estándares de calidad.
@@ -148,7 +147,7 @@ const Index = () => {
       </section>
       
       {/* Services Preview */}
-      <section className="py-20 bg-gray-50">
+      <section className="pb-20 bg-gray-50">
         <div className="container-custom">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -156,7 +155,7 @@ const Index = () => {
                 Nuestros Servicios
               </h2>
               <p className="text-gray-600 text-lg">
-                Soluciones completas de transporte y mudanza adaptadas a sus necesidades específicas.
+                Soluciones completas de Fletes y mudanza adaptadas a sus necesidades específicas.
               </p>
             </div>
           </ScrollReveal>
@@ -182,35 +181,6 @@ const Index = () => {
               </Link>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-      
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-mc-dark mb-4">
-                Lo Que Dicen Nuestros Clientes
-              </h2>
-              <p className="text-gray-600 text-lg">
-                La satisfacción de nuestros clientes es nuestra mayor recompensa.
-              </p>
-            </div>
-          </ScrollReveal>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard 
-                key={testimonial.id}
-                name={testimonial.name}
-                role={testimonial.role}
-                content={testimonial.content}
-                avatar={testimonial.avatar}
-                index={index}
-              />
-            ))}
-          </div>
         </div>
       </section>
       

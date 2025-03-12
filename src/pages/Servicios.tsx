@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
@@ -36,7 +35,7 @@ const Servicios = () => {
                 Nuestros Servicios
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                Ofrecemos soluciones integrales de transporte y mudanzas adaptadas a sus necesidades específicas, con los más altos estándares de calidad y seguridad.
+                Ofrecemos soluciones integrales de Fletes y mudanzas adaptadas a sus necesidades específicas, con los más altos estándares de calidad y seguridad.
               </p>
             </div>
           </ScrollReveal>
@@ -44,7 +43,7 @@ const Servicios = () => {
       </section>
       
       {/* Services Detail Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-10 pb-20 bg-white">
         <div className="container-custom">
           {services.map((service, index) => (
             <div 
@@ -54,80 +53,161 @@ const Servicios = () => {
               className="mb-24 last:mb-0"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <ScrollReveal direction={index % 2 === 0 ? "left" : "right"}>
-                  <div className="rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
-                      style={{ aspectRatio: "16/9" }}
-                    />
-                  </div>
-                </ScrollReveal>
-                
-                <ScrollReveal direction={index % 2 === 0 ? "right" : "left"}>
-                  <div className={`lg:${index % 2 === 0 ? 'pl-8' : 'pr-8'}`}>
-                    <h2 className="text-3xl font-bold text-mc-dark mb-6">
-                      {service.title}
-                    </h2>
-                    <p className="text-gray-600 mb-8">
-                      {service.description}
-                    </p>
-                    
-                    <div className="space-y-4 mb-8">
-                      <h3 className="text-xl font-semibold text-mc-dark">
-                        Características del Servicio:
-                      </h3>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1">
-                            <Check size={16} className="text-mc-primary" />
-                          </div>
-                          <p className="text-gray-600">Personal capacitado y profesional</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1">
-                            <Check size={16} className="text-mc-primary" />
-                          </div>
-                          <p className="text-gray-600">Vehículos adecuados para cada necesidad</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1">
-                            <Check size={16} className="text-mc-primary" />
-                          </div>
-                          <p className="text-gray-600">Seguro de transporte incluido</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1">
-                            <Check size={16} className="text-mc-primary" />
-                          </div>
-                          <p className="text-gray-600">Evaluación previa sin costo</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1">
-                            <Check size={16} className="text-mc-primary" />
-                          </div>
-                          <p className="text-gray-600">Embalaje profesional disponible</p>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="mr-3 mt-1">
-                            <Check size={16} className="text-mc-primary" />
-                          </div>
-                          <p className="text-gray-600">Servicio en todo Paraguay</p>
-                        </div>
+                {index % 2 === 0 ? (
+                  <>
+                    <ScrollReveal direction="left">
+                      <div className="rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
+                          style={{ aspectRatio: "16/9" }}
+                        />
                       </div>
-                    </div>
+                    </ScrollReveal>
                     
-                    <Link
-                      to="/contacto"
-                      className="inline-flex items-center bg-mc-primary text-white font-medium px-6 py-3 rounded-full hover:bg-mc-secondary transition-colors duration-300"
-                    >
-                      <span>Solicitar Presupuesto</span>
-                      <ArrowRight size={18} className="ml-2" />
-                    </Link>
-                  </div>
-                </ScrollReveal>
+                    <ScrollReveal direction="right">
+                      <div className="lg:pl-8 space-y-6">
+                        <h2 className="text-3xl font-bold text-mc-dark">
+                          {service.title}
+                        </h2>
+                        <p className="text-gray-600">
+                          {service.description}
+                        </p>
+                        
+                        <div className="space-y-6">
+                          <h3 className="text-xl font-semibold text-mc-dark">
+                            Características del Servicio:
+                          </h3>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Personal capacitado y profesional</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Vehículos adecuados para cada necesidad</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Seguro de Fletes incluido</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Evaluación previa sin costo</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Embalaje profesional disponible</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Servicio en todo Paraguay</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <Link
+                          to="/contacto"
+                          className="inline-flex items-center bg-mc-primary text-white font-medium px-6 py-3 rounded-full hover:bg-mc-secondary transition-colors duration-300"
+                        >
+                          <span>Solicitar Presupuesto</span>
+                          <ArrowRight size={18} className="ml-2" />
+                        </Link>
+                      </div>
+                    </ScrollReveal>
+                  </>
+                ) : (
+                  <>
+                    <ScrollReveal direction="left">
+                      <div className="lg:pr-8 space-y-6">
+                        <h2 className="text-3xl font-bold text-mc-dark">
+                          {service.title}
+                        </h2>
+                        <p className="text-gray-600">
+                          {service.description}
+                        </p>
+                        
+                        <div className="space-y-6">
+                          <h3 className="text-xl font-semibold text-mc-dark">
+                            Características del Servicio:
+                          </h3>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Personal capacitado y profesional</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Vehículos adecuados para cada necesidad</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Seguro de Fletes incluido</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Evaluación previa sin costo</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Embalaje profesional disponible</p>
+                            </div>
+                            <div className="flex items-start">
+                              <div className="mr-3 mt-1">
+                                <Check size={16} className="text-mc-primary" />
+                              </div>
+                              <p className="text-gray-600">Servicio en todo Paraguay</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <Link
+                          to="/contacto"
+                          className="inline-flex items-center bg-mc-primary text-white font-medium px-6 py-3 rounded-full hover:bg-mc-secondary transition-colors duration-300"
+                        >
+                          <span>Solicitar Presupuesto</span>
+                          <ArrowRight size={18} className="ml-2" />
+                        </Link>
+                      </div>
+                    </ScrollReveal>
+
+                    <ScrollReveal direction="right">
+                      <div className="rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
+                          style={{ aspectRatio: "16/9" }}
+                        />
+                      </div>
+                    </ScrollReveal>
+                  </>
+                )}
               </div>
             </div>
           ))}

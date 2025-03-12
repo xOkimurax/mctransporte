@@ -48,31 +48,55 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             <h1 className="text-xl md:text-2xl font-bold text-mc-dark">
-              <span className="text-mc-primary">MC</span> Transporte
+              <span className="text-mc-primary">MC </span> Fletes & Mudanzas
             </h1>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-mc-dark hover:text-mc-primary font-medium transition-colors duration-200">
+            <Link 
+              to="/" 
+              className={cn(
+                "text-mc-dark hover:text-mc-primary font-medium relative transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-mc-primary hover:after:w-full after:transition-all after:duration-300",
+                location.pathname === "/" && "text-mc-primary after:w-full"
+              )}
+            >
               Inicio
             </Link>
-            <Link to="/servicios" className="text-mc-dark hover:text-mc-primary font-medium transition-colors duration-200">
+            <Link 
+              to="/servicios" 
+              className={cn(
+                "text-mc-dark hover:text-mc-primary font-medium relative transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-mc-primary hover:after:w-full after:transition-all after:duration-300",
+                location.pathname === "/servicios" && "text-mc-primary after:w-full"
+              )}
+            >
               Servicios
             </Link>
-            <Link to="/nosotros" className="text-mc-dark hover:text-mc-primary font-medium transition-colors duration-200">
+            <Link 
+              to="/nosotros" 
+              className={cn(
+                "text-mc-dark hover:text-mc-primary font-medium relative transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-mc-primary hover:after:w-full after:transition-all after:duration-300",
+                location.pathname === "/nosotros" && "text-mc-primary after:w-full"
+              )}
+            >
               Nosotros
             </Link>
-            <Link to="/contacto" className="text-mc-dark hover:text-mc-primary font-medium transition-colors duration-200">
+            <Link 
+              to="/contacto" 
+              className={cn(
+                "text-mc-dark hover:text-mc-primary font-medium relative transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-mc-primary hover:after:w-full after:transition-all after:duration-300",
+                location.pathname === "/contacto" && "text-mc-primary after:w-full"
+              )}
+            >
               Contacto
             </Link>
             <a 
               href={whatsappLink} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center bg-mc-primary hover:bg-mc-secondary text-white px-5 py-2 rounded-full transition-all duration-300"
+              className="group flex items-center bg-mc-primary hover:bg-mc-secondary text-white px-5 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <Phone size={18} className="mr-2" />
+              <Phone size={18} className="mr-2 group-hover:animate-pulse" />
               <span>{contactInfo.phone}</span>
             </a>
           </nav>

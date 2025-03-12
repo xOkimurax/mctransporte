@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h2 className="text-xl font-bold">
-              <span className="text-mc-primary">MC</span> Transporte
+              <span className="text-mc-primary">MC</span> Fletes
             </h2>
             <p className="text-gray-300 max-w-xs">
               {companyInfo.description.substring(0, 120)}...
@@ -58,8 +58,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/servicios#transporte-comercial" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Transporte Comercial
+                <Link to="/servicios#Fletes-comercial" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Fletes Comercial
                 </Link>
               </li>
               <li>
@@ -98,14 +98,11 @@ const Footer = () => {
                 </span>
               </li>
               <li className="flex items-center space-x-4 pt-2">
-                <a href={contactInfo.socialMedia.facebook} className="text-gray-300 hover:text-white transition-colors duration-200">
-                  <Facebook size={20} />
-                </a>
+              <a href={contactInfo.socialMedia.facebook} className="text-gray-300 hover:text-white transition-colors duration-200">
+              <Facebook size={20} />
+              </a>
                 <a href={contactInfo.socialMedia.instagram} className="text-gray-300 hover:text-white transition-colors duration-200">
                   <Instagram size={20} />
-                </a>
-                <a href={contactInfo.socialMedia.twitter} className="text-gray-300 hover:text-white transition-colors duration-200">
-                  <Twitter size={20} />
                 </a>
               </li>
             </ul>

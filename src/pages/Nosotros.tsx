@@ -16,7 +16,7 @@ const Nosotros = () => {
                 Sobre Nosotros
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                Conozca más sobre nuestra empresa y por qué somos líderes en servicios de transporte y mudanzas en Paraguay.
+                Conozca más sobre nuestra empresa y por qué somos líderes en servicios de Fletes y mudanzas en Paraguay.
               </p>
             </div>
           </ScrollReveal>
@@ -24,22 +24,22 @@ const Nosotros = () => {
       </section>
       
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-10 pb-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
               <div className="relative">
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/src/assets/about-image.jpg" 
-                    alt="MC Transporte equipo" 
+                    src="/src/assets/MC-equipo.jpeg" 
+                    alt="MC Fletes equipo" 
                     className="w-full h-auto object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-8 -right-8 bg-mc-primary text-white p-6 rounded-lg shadow-lg">
+               {/*div className="absolute -bottom-8 -right-8 bg-mc-primary text-white p-6 rounded-lg shadow-lg">
                   <div className="text-4xl font-bold">{companyInfo.founded}</div>
                   <div className="text-sm uppercase tracking-wider">Fundado</div>
-                </div>
+                </div>*/}
               </div>
             </ScrollReveal>
             
@@ -55,10 +55,10 @@ const Nosotros = () => {
                   {companyInfo.description}
                 </p>
                 <p className="text-gray-600 mb-6">
-                  Desde nuestra fundación en {companyInfo.founded}, hemos estado comprometidos con brindar soluciones de transporte y mudanzas que superan las expectativas de nuestros clientes. Nuestra experiencia en el sector nos ha permitido perfeccionar nuestros procesos y ofrecer un servicio cada vez más eficiente y de mayor calidad.
+                  Desde nuestra fundación{/* en companyInfo.founded*/}, hemos estado comprometidos con brindar soluciones de Fletes y mudanzas que superan las expectativas de nuestros clientes. Nuestra experiencia en el sector nos ha permitido perfeccionar nuestros procesos y ofrecer un servicio cada vez más eficiente y de mayor calidad.
                 </p>
                 <p className="text-gray-600">
-                  Contamos con un equipo altamente capacitado y una flota moderna, preparada para hacer frente a cualquier desafío de transporte, desde pequeñas mudanzas residenciales hasta grandes proyectos logísticos para empresas.
+                  Contamos con un equipo altamente capacitado y una flota moderna, preparada para hacer frente a cualquier desafío de Fletes, desde pequeñas mudanzas residenciales hasta grandes proyectos logísticos para empresas.
                 </p>
               </div>
             </ScrollReveal>
@@ -66,8 +66,43 @@ const Nosotros = () => {
         </div>
       </section>
       
+      {/* Stats Section */}
+      <section className="pb-20 bg-mc-primary text-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <ScrollReveal direction="up" delay={100}>
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-3">+100</div>
+                <div className="text-xl font-medium">Mudanzas Realizadas</div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="up" delay={200}>
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-3">+80</div>
+                <div className="text-xl font-medium">Clientes Satisfechos</div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="up" delay={300}>
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-3">5</div>
+                <div className="text-xl font-medium">Vehículos Especializados</div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal direction="up" delay={400}>
+              <div className="text-center">
+                <div className="text-5xl font-bold mb-3">24/7</div>
+                <div className="text-xl font-medium">Atención al Cliente</div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="pt-10 pb-20 bg-gray-50">
         <div className="container-custom">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -104,42 +139,9 @@ const Nosotros = () => {
         </div>
       </section>
       
-      {/* Stats Section */}
-      <section className="py-20 bg-mc-primary text-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ScrollReveal direction="up" delay={100}>
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-3">+1000</div>
-                <div className="text-xl font-medium">Mudanzas Realizadas</div>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal direction="up" delay={200}>
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-3">+500</div>
-                <div className="text-xl font-medium">Clientes Satisfechos</div>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal direction="up" delay={300}>
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-3">15</div>
-                <div className="text-xl font-medium">Vehículos Especializados</div>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal direction="up" delay={400}>
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-3">24/7</div>
-                <div className="text-xl font-medium">Atención al Cliente</div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
       
-      {/* Team Section */}
+      
+      {/* Team Section 
       <section className="py-20 bg-white">
         <div className="container-custom">
           <ScrollReveal>
@@ -215,10 +217,13 @@ const Nosotros = () => {
             </ScrollReveal>
           </div>
         </div>
-      </section>
+      </section>*/}
+      
+
+
       
       {/* CTA Section */}
-      <CTA title="¿Quiere conocer más sobre nosotros?" subtitle="Contáctenos hoy mismo para hablar sobre sus necesidades de transporte" />
+      <CTA title="¿Quiere conocer más sobre nosotros?" subtitle="Contáctenos hoy mismo para hablar sobre sus necesidades de Fletes" />
     </>
   );
 };

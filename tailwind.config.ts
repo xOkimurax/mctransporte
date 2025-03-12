@@ -63,7 +63,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Custom colors for MC Transporte
+        // Custom colors for MC Fletes
         mc: {
           primary: "#1a56db",
           secondary: "#0e2e6b",

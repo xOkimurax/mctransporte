@@ -9,7 +9,7 @@ interface CTAProps {
 }
 
 const CTA = ({ 
-  title = "¿Necesita un servicio de transporte o mudanza?", 
+  title = "¿Necesita un servicio de Fletes o mudanza?", 
   subtitle = "Contáctenos hoy para una cotización gratuita",
   className = ""
 }: CTAProps) => {
