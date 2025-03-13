@@ -1,4 +1,4 @@
-
+// Contacto.tsx responsivo
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Send, AlertCircle, Clock} from "lucide-react";
@@ -101,14 +101,14 @@ const Contacto = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-mc-accent to-white">
-        <div className="container-custom">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-to-br from-mc-accent to-white">
+        <div className="container mx-auto px-4">
           <ScrollReveal direction="up">
             <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-mc-dark mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-mc-dark mb-4 md:mb-6">
                 Contáctenos
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
                 Estamos aquí para responder a todas sus consultas y ofrecerle un presupuesto personalizado para sus necesidades.
               </p>
             </div>
@@ -117,230 +117,86 @@ const Contacto = () => {
       </section>
       
       {/* Contact Info & Form Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
             {/* Contact Info */}
             <ScrollReveal direction="down">
-  <div className="bg-mc-accent rounded-xl p-8 shadow-lg">
-    <h2 className="text-2xl font-bold text-mc-dark mb-10 text-center">Información de Contacto</h2>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 max-w-4xl mx-auto">
-      {/* Teléfono */}
-      <div className="flex items-center">
-        <div className="w-12 h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
-          <Phone size={20} className="text-white" />
-        </div>
-        <div>
-          <h3 className="font-semibold text-mc-dark mb-1">Teléfono</h3>
-          <p className="text-gray-600 mb-1">{contactInfo.phone}</p>
-          <a 
-            href={whatsappLink} 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-mc-primary hover:text-mc-secondary font-medium inline-flex items-center"
-          >
-            <span>Contactar por WhatsApp</span>
-            <Send size={16} className="ml-2" />
-          </a>
-        </div>
-      </div>
-      
-      {/* Email */}
-      <div className="flex items-center">
-        <div className="w-12 h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
-          <Mail size={20} className="text-white" />
-        </div>
-        <div>
-          <h3 className="font-semibold text-mc-dark mb-1">Email</h3>
-          <a 
-            href={`mailto:${contactInfo.email}`}
-            className="text-gray-600 hover:text-mc-primary transition-colors duration-200"
-          >
-            {contactInfo.email}
-          </a>
-        </div>
-      </div>
-      
-      {/* Ubicación */}
-      <div className="flex items-center">
-        <div className="w-12 h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
-          <MapPin size={20} className="text-white" />
-        </div>
-        <div>
-          <h3 className="font-semibold text-mc-dark mb-1">Ubicación</h3>
-          <p className="text-gray-600">{contactInfo.address}</p>
-        </div>
-      </div>
-      
-      {/* Horario */}
-      <div className="flex items-center">
-        <div className="w-12 h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
-          <Clock size={20} className="text-white" />
-        </div>
-        <div>
-          <h3 className="font-semibold text-mc-dark mb-1">Horario de atención</h3>
-          <p className="text-gray-600">24/7</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</ScrollReveal>
-
-            
-
-            {/* Contact Form 
-            <ScrollReveal direction="right">
-            <div className="bg-mc-accent rounded-xl p-8 shadow-lg">
-                <h2 className="text-2xl font-bold text-mc-dark mb-8">Horario de Atención</h2>
-                  <div className="mt-12">
-                      <div className="space-y-2">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Lunes - Viernes:</span>
-                          <span className="font-medium text-mc-dark">8:00 - 18:00</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Sábados:</span>
-                          <span className="font-medium text-mc-dark">8:00 - 13:00</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Domingos:</span>
-                          <span className="font-medium text-mc-dark">Cerrado</span>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </ScrollReveal> 
-
-
-            <ScrollReveal direction="right">
-              <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-2xl font-bold text-mc-dark mb-8">Envíenos un Mensaje</h2>
+              <div className="bg-mc-accent rounded-xl p-6 md:p-8 shadow-lg">
+                <h2 className="text-xl md:text-2xl font-bold text-mc-dark mb-6 md:mb-10 text-center">Información de Contacto</h2>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Nombre Completo
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={formErrors.name ? "border-red-500" : ""}
-                    />
-                    {formErrors.name && (
-                      <p className="mt-1 text-sm text-red-500 flex items-center">
-                        <AlertCircle size={14} className="mr-1" /> {formErrors.name}
-                      </p>
-                    )}
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={formErrors.email ? "border-red-500" : ""}
-                      />
-                      {formErrors.email && (
-                        <p className="mt-1 text-sm text-red-500 flex items-center">
-                          <AlertCircle size={14} className="mr-1" /> {formErrors.email}
-                        </p>
-                      )}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-8 md:gap-x-16 max-w-4xl mx-auto">
+                  {/* Teléfono */}
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
+                      <Phone size={18} className="text-white" />
                     </div>
-                    
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Teléfono
-                      </label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className={formErrors.phone ? "border-red-500" : ""}
-                      />
-                      {formErrors.phone && (
-                        <p className="mt-1 text-sm text-red-500 flex items-center">
-                          <AlertCircle size={14} className="mr-1" /> {formErrors.phone}
-                        </p>
-                      )}
+                      <h3 className="font-semibold text-mc-dark mb-1">Teléfono</h3>
+                      <p className="text-gray-600 mb-1">{contactInfo.phone}</p>
+                      <a 
+                        href={whatsappLink} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-mc-primary hover:text-mc-secondary font-medium inline-flex items-center"
+                      >
+                        <span>Contactar por WhatsApp</span>
+                        <Send size={14} className="ml-2" />
+                      </a>
                     </div>
                   </div>
                   
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                      Servicio de Interés
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className={`w-full rounded-md border ${formErrors.service ? "border-red-500" : "border-gray-300"} px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-mc-primary`}
-                    >
-                      <option value="">Seleccione un servicio</option>
-                      <option value="mudanzas">Mudanzas Residenciales</option>
-                      <option value="Fletes-comercial">Fletes Comercial</option>
-                      <option value="logistica">Logística y Distribución</option>
-                      <option value="embalaje">Embalaje Profesional</option>
-                      <option value="almacenamiento">Almacenamiento Temporal</option>
-                      <option value="internacional">Mudanzas Internacionales</option>
-                    </select>
-                    {formErrors.service && (
-                      <p className="mt-1 text-sm text-red-500 flex items-center">
-                        <AlertCircle size={14} className="mr-1" /> {formErrors.service}
-                      </p>
-                    )}
+                  {/* Email */}
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
+                      <Mail size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-mc-dark mb-1">Email</h3>
+                      <a 
+                        href={`mailto:${contactInfo.email}`}
+                        className="text-gray-600 hover:text-mc-primary transition-colors duration-200"
+                      >
+                        {contactInfo.email}
+                      </a>
+                    </div>
                   </div>
                   
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Mensaje
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className={formErrors.message ? "border-red-500" : ""}
-                    />
-                    {formErrors.message && (
-                      <p className="mt-1 text-sm text-red-500 flex items-center">
-                        <AlertCircle size={14} className="mr-1" /> {formErrors.message}
-                      </p>
-                    )}
+                  {/* Ubicación */}
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
+                      <MapPin size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-mc-dark mb-1">Ubicación</h3>
+                      <p className="text-gray-600">{contactInfo.address}</p>
+                    </div>
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-mc-primary hover:bg-mc-secondary text-white"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
-                  </Button>
-                </form>
+                  {/* Horario */}
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-mc-primary flex items-center justify-center mr-4 flex-shrink-0">
+                      <Clock size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-mc-dark mb-1">Horario de atención</h3>
+                      <p className="text-gray-600">24/7</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </ScrollReveal>*/}
+            </ScrollReveal>
         </div>
       </section>
       
       {/* Map Section */}
-      <section className="pb-40 bg-gray-50">
-        <div className="container-custom">
+      <section className="pb-20 md:pb-40 bg-gray-50">
+        <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold text-mc-dark mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-mc-dark mb-3 md:mb-4">
                 Nuestra Ubicación
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm md:text-base">
                 Estamos ubicados en una zona estratégica para brindarle un mejor servicio.
               </p>
             </div>
@@ -351,7 +207,8 @@ const Contacto = () => {
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115872.99258374562!2d-57.70334229668647!3d-25.28934944900352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8fc27584a9d%3A0xefa3149ac5777af8!2sAsunci%C3%B3n%2C%20Paraguay!5e0!3m2!1ses-419!2s!4v1721335248097!5m2!1ses-419!2s" 
                 width="100%" 
-                height="450" 
+                height="350"
+                className="md:h-[450px]" 
                 style={{ border: 0 }} 
                 allowFullScreen 
                 loading="lazy" 
@@ -363,27 +220,27 @@ const Contacto = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="pb-20 bg-white">
-        <div className="container-custom">
+      <section className="pb-16 md:pb-20 bg-white">
+        <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold text-mc-dark mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-mc-dark mb-3 md:mb-4">
                 Preguntas Frecuentes
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm md:text-base">
                 Aquí respondemos algunas de las preguntas más comunes sobre nuestros servicios.
               </p>
             </div>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {faqs.map((faq, index) => (
               <ScrollReveal key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 100}>
-                <div className="bg-gray-50 rounded-xl p-6 hover-lift">
-                  <h3 className="text-lg font-semibold text-mc-dark mb-3">
+                <div className="bg-gray-50 rounded-xl p-5 md:p-6 hover-lift">
+                  <h3 className="text-base md:text-lg font-semibold text-mc-dark mb-2 md:mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     {faq.answer}
                   </p>
                 </div>
@@ -392,17 +249,17 @@ const Contacto = () => {
           </div>
           
           <ScrollReveal delay={400}>
-            <div className="text-center mt-12">
-              <p className="text-gray-600 mb-4">
+            <div className="text-center mt-10 md:mt-12">
+              <p className="text-gray-600 mb-4 text-sm md:text-base">
                 ¿No encontró respuesta a su pregunta?
               </p>
               <Link 
                 to={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-mc-primary text-white font-medium px-6 py-3 rounded-full hover:bg-mc-secondary transition-colors duration-300"
+                className="inline-flex items-center bg-mc-primary text-white font-medium px-4 py-2 md:px-6 md:py-3 rounded-full hover:bg-mc-secondary transition-colors duration-300 text-sm md:text-base"
               >
-                <Phone size={18} className="mr-2" />
+                <Phone size={16} className="mr-2" />
                 <span>Contáctenos por WhatsApp</span>
               </Link>
             </div>

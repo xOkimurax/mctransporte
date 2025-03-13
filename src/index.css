@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -139,4 +138,41 @@
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     @apply animate-float;
   }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+}
+
+/* Ajustes para el menú móvil */
+.mobile-menu-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300;
+}
+
+.mobile-menu {
+  @apply fixed top-0 right-0 h-auto max-h-[80vh] w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out rounded-bl-2xl overflow-y-auto;
+}
+
+/* Ajustes para el contenido principal */
+.main-content {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+/* Hero section adjustments */
+.hero-section {
+  @apply relative flex flex-col items-center justify-center w-full z-10;
+}
+
+.hero-content {
+  @apply w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }

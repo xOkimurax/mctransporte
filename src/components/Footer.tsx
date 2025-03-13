@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { contactInfo, companyInfo } from "@/assets/data";
@@ -87,8 +86,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-3 text-mc-primary" />
-                <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-white transition-colors duration-200">
-                  {contactInfo.email}
+                <a href="mailto:alcidesmartinez0404@gmail.com" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  alcidesmartinez0404@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -110,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} {companyInfo.name}. Todos los derechos reservados.</p>
+          <p> {new Date().getFullYear()} {companyInfo.name}. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
