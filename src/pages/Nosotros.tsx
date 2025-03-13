@@ -1,8 +1,10 @@
 // Nosotros.tsx responsivo
-import { Award, Users, Target, Clock } from "lucide-react";
+import { Award, Users, Target, Clock, ArrowRight } from "lucide-react";
 import { companyInfo } from "@/assets/data";
-import CTA from "@/components/CTA";
-import ScrollReveal from "@/components/ScrollReveal";
+import { Link } from "react-router-dom";
+import CTA from "../components/CTA";
+import ScrollReveal from "../components/ScrollReveal";
+import equipo from "../assets/MC-equipo.jpeg";
 
 const Nosotros = () => {
   return (
@@ -31,9 +33,10 @@ const Nosotros = () => {
               <div className="relative">
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="/src/assets/MC-equipo.jpeg" 
-                    alt="MC Fletes equipo" 
-                    className="w-full h-auto object-cover"
+                    src={equipo}
+                    alt="Equipo MC Fletes" 
+                    className="w-full h-auto object-cover rounded-xl shadow-xl"
+                    style={{ aspectRatio: "16/9" }}
                   />
                 </div>
               </div>

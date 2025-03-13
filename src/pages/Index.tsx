@@ -7,6 +7,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTA from "@/components/CTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import camionTransporte from "@/assets/camionTransporte.jpeg";
 
 const Index = () => {
   // Display only 3 services on homepage
@@ -58,7 +59,7 @@ const Index = () => {
               <div className="relative w-full max-w-xs mx-auto">
                 <div className="rounded-xl overflow-hidden shadow-xl">
                   <img 
-                    src="/src/assets/camionTransporte.jpeg" 
+                    src={camionTransporte} 
                     alt="MC Fletes y Mudanzas" 
                     className="w-full h-auto object-cover"
                     style={{ aspectRatio: "4/3" }}
@@ -119,7 +120,7 @@ const Index = () => {
                   <div className="relative max-w-md mx-auto">
                     <div className="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]">
                       <img 
-                        src="/src/assets/camionTransporte.jpeg" 
+                        src={camionTransporte} 
                         alt="MC Fletes y Mudanzas" 
                         className="w-full h-auto object-cover"
                         style={{ aspectRatio: "4/3" }}

@@ -1,3 +1,8 @@
+import mudanzasResidenciales from "./mudanzas-residenciales.png";
+import fletesComercial from "./fletes-comercial.png";
+import logisticaDistribucion from "./logística-distribución.png";
+import embalajeProfesional from "./embalaje-profesional.jpeg";
+import almacenamientoTemporal from "./almacenamiento-temporal.jpeg";
 
 export interface Service {
   id: string;
@@ -13,39 +18,37 @@ export const services: Service[] = [
     title: "Mudanzas Residenciales",
     description: "Ofrecemos servicios completos de mudanza para hogares, con embalaje profesional, Fletes seguro y desembalaje en el destino.",
     icon: "home",
-    image: "/src/assets/mudanzas-residenciales.png"
+    image: mudanzasResidenciales
   },
   {
     id: "Fletes-comercial",
     title: "Fletes Comercial",
     description: "Soluciones de Fletes para empresas, con manejo especializado de equipos de oficina, archivos y mobiliario comercial.",
     icon: "building-2",
-    image: "/src/assets/fletes-comercial.png"
+    image: fletesComercial
   },
   {
     id: "logistica",
     title: "Logística y Distribución",
     description: "Servicios logísticos completos para entrega de mercancías, gestión de almacenes y distribución a nivel nacional.",
     icon: "truck",
-    image: "/src/assets/logística-distribución.png"
+    image: logisticaDistribucion
   },
   {
     id: "embalaje",
     title: "Embalaje Profesional",
     description: "Servicio de embalaje con materiales de alta calidad para asegurar la protección de sus pertenencias durante el traslado.",
     icon: "package",
-    image: "/src/assets/embalaje-profesional.jpeg"
+    image: embalajeProfesional
   },
   {
     id: "almacenamiento",
     title: "Almacenamiento Temporal",
     description: "Espacios seguros y climatizados para el almacenamiento temporal de sus pertenencias cuando lo necesite.",
     icon: "warehouse",
-    image: "/src/assets/almacenamiento-temporal.jpeg"
+    image: almacenamientoTemporal
   },
 ];
-
-
 
 export const faqs = [
   {
