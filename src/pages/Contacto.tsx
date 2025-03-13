@@ -233,9 +233,9 @@ const Contacto = () => {
             </div>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
-              <ScrollReveal key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 100}>
+              <ScrollReveal key={index} direction={window.innerWidth >= 768 ? (index % 2 === 0 ? "left" : "right") : "up"} delay={index * 100}>
                 <div className="bg-gray-50 rounded-xl p-5 md:p-6 hover-lift">
                   <h3 className="text-base md:text-lg font-semibold text-mc-dark mb-2 md:mb-3">
                     {faq.question}

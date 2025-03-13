@@ -26,8 +26,8 @@ const Nosotros = () => {
       {/* About Section */}
       <section className="pt-6 md:pt-10 pb-16 md:pb-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <ScrollReveal direction="left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-5xl mx-auto">
+            <ScrollReveal direction={window.innerWidth >= 1024 ? "left" : "up"}>
               <div className="relative">
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <img 
@@ -39,7 +39,7 @@ const Nosotros = () => {
               </div>
             </ScrollReveal>
             
-            <ScrollReveal direction="right">
+            <ScrollReveal direction={window.innerWidth >= 1024 ? "right" : "up"} delay={200}>
               <div className="lg:pl-4 xl:pl-8">
                 <div className="inline-block px-3 py-1 bg-mc-accent text-mc-primary font-medium rounded-full text-sm mb-3 md:mb-4">
                   Nuestra Historia
@@ -63,7 +63,7 @@ const Nosotros = () => {
       </section>
       
       {/* Stats Section */}
-      <section className="py-16 md:pb-20 bg-mc-primary text-white">
+      <section className="pb-16 md:pb-20 bg-mc-primary text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <ScrollReveal direction="up" delay={100}>
@@ -114,9 +114,9 @@ const Nosotros = () => {
             </div>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {companyInfo.values.map((value, index) => (
-              <ScrollReveal key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 100}>
+              <ScrollReveal key={index} direction={window.innerWidth >= 768 ? (index % 2 === 0 ? "left" : "right") : "up"} delay={index * 100}>
                 <div className="bg-white rounded-xl p-5 md:p-8 shadow-md hover-lift flex">
                   <div className="mr-4 md:mr-6">
                     {index === 0 && <Award size={28} className="text-mc-primary" />}

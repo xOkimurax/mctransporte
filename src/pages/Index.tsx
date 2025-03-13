@@ -162,7 +162,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <ScrollReveal direction="up" delay={200}>
               <div className="bg-white rounded-xl p-5 shadow-md hover-lift h-full">
                 <div className="w-12 h-12 bg-mc-accent rounded-full flex items-center justify-center mb-4">
@@ -230,7 +230,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {featuredServices.map((service, index) => (
               <ServiceCard 
                 key={service.id} 
