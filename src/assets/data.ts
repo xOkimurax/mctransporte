@@ -76,7 +76,7 @@ export const faqs = [
 
 export const contactInfo = {
   phone: "0982530117",
-  email: "info@mcFletes.com.py",
+  email: "alcidesmartinez0404@gmail.com",
   address: "Asunción, Paraguay",
   whatsapp: "0982530117",
   socialMedia: {
