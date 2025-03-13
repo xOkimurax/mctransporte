@@ -2,12 +2,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Send, AlertCircle, Clock} from "lucide-react";
-import { contactInfo, faqs } from "@/assets/data";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
-import ScrollReveal from "@/components/ScrollReveal";
+import { contactInfo, faqs } from "../assets/data";
+import { WHATSAPP_MESSAGE } from "../utils/constants";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
+import { useToast } from "../components/ui/use-toast";
+import ScrollReveal from "../components/ScrollReveal";
+import CTA from "../components/CTA";
 
 const Contacto = () => {
   const { toast } = useToast();
@@ -96,7 +98,7 @@ const Contacto = () => {
   };
   
   // WhatsApp link
-  const whatsappLink = `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hola!. Vengo del sitio web y quiesiera una cotización del servicio que necesito")}`;
+  const whatsappLink = `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
   
   return (
     <>
@@ -153,10 +155,10 @@ const Contacto = () => {
                     <div>
                       <h3 className="font-semibold text-mc-dark mb-1">Email</h3>
                       <a 
-                        href={`mailto:${contactInfo.email}`}
+                        href="mailto:alcidesmartinez0404@gmail.com"
                         className="text-gray-600 hover:text-mc-primary transition-colors duration-200"
                       >
-                        {contactInfo.email}
+                        alcidesmartinez0404@gmail.com
                       </a>
                     </div>
                   </div>

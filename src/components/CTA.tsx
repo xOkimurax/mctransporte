@@ -1,6 +1,6 @@
-
 import { Phone } from 'lucide-react';
-import { contactInfo } from '@/assets/data';
+import { contactInfo } from '../assets/data';
+import { WHATSAPP_MESSAGE } from '../utils/constants';
 
 interface CTAProps {
   title?: string;
@@ -13,7 +13,7 @@ const CTA = ({
   subtitle = "Contáctenos hoy para una cotización gratuita",
   className = ""
 }: CTAProps) => {
-  const whatsappLink = `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hola!. Vengo del sitio web y quiesiera una cotización del servicio que necesito")}`;
+  const whatsappLink = `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
     <section className={`bg-mc-primary py-16 ${className}`}>
