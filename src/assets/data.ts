@@ -78,13 +78,13 @@ export const faqs = [
 ];
 
 export const contactInfo = {
-  phone: "0982530117",
+  phone: "0982 530 117",
   email: "alcidesmartinez0404@gmail.com",
   address: "Asunción, Paraguay",
-  whatsapp: "0982530117",
+  whatsapp: "595982530117",
   socialMedia: {
-    facebook: "https://www.facebook.com/people/MC-Fletes-y-Mudanzas-Paraguay/61574068372232/",
-    instagram: "https://instagram.com",
+    facebook: "https://www.facebook.com/mcfletesymudanzas",
+    instagram: "https://www.instagram.com/mcfletesymudanzas"
   }
 };
 
