@@ -7,7 +7,78 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTA from "@/components/CTA";
 import ScrollReveal from "@/components/ScrollReveal";
-import camionTransporte from "@/assets/camionTransporte.jpeg";
+import transporte1 from "@/assets/transporte1.jpeg";
+import transporte2 from "@/assets/transporte2.jpeg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const ImageCarousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    cssEase: "linear",
+    arrows: false,
+    dotsClass: "slick-dots custom-dots"
+  };
+
+  return (
+    <div className="relative w-full h-full carousel-container">
+      <style>
+        {`
+          .carousel-container {
+            height: 100%;
+          }
+          .carousel-container .slick-slider,
+          .carousel-container .slick-list,
+          .carousel-container .slick-track,
+          .carousel-container .slick-slide > div {
+            height: 100%;
+          }
+          .carousel-container .slick-slide > div {
+            width: 100%;
+          }
+          .carousel-container .custom-dots {
+            bottom: -25px;
+          }
+          .carousel-container .custom-dots li button:before {
+            color: #666;
+            opacity: 0.5;
+            font-size: 8px;
+          }
+          .carousel-container .custom-dots li.slick-active button:before {
+            color: #333;
+            opacity: 1;
+          }
+        `}
+      </style>
+      <Slider {...settings}>
+        <div className="w-full h-full">
+          <img
+            src={transporte1}
+            alt="MC Fletes y Mudanzas 1"
+            className="w-full h-full object-cover"
+            style={{ aspectRatio: "4/3", display: "block" }}
+          />
+        </div>
+        <div className="w-full h-full">
+          <img
+            src={transporte2}
+            alt="MC Fletes y Mudanzas 2"
+            className="w-full h-full object-cover"
+            style={{ aspectRatio: "4/3", display: "block" }}
+          />
+        </div>
+      </Slider>
+    </div>
+  );
+};
 
 const Index = () => {
   // Display only 3 services on homepage
@@ -57,13 +128,8 @@ const Index = () => {
               
               {/* Imagen centrada en móvil */}
               <div className="relative w-full max-w-xs mx-auto">
-                <div className="rounded-xl overflow-hidden shadow-xl">
-                  <img 
-                    src={camionTransporte} 
-                    alt="MC Fletes y Mudanzas" 
-                    className="w-full h-auto object-cover"
-                    style={{ aspectRatio: "4/3" }}
-                  />
+                <div className="rounded-xl overflow-hidden shadow-xl h-[300px]">
+                  <ImageCarousel />
                 </div>
                 
                 {/* Floating badge */}
@@ -118,13 +184,8 @@ const Index = () => {
                 
                 <ScrollReveal direction="right" delay={300} className="flex justify-center">
                   <div className="relative max-w-md mx-auto">
-                    <div className="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02]">
-                      <img 
-                        src={camionTransporte} 
-                        alt="MC Fletes y Mudanzas" 
-                        className="w-full h-auto object-cover"
-                        style={{ aspectRatio: "4/3" }}
-                      />
+                    <div className="rounded-xl overflow-hidden shadow-xl transform transition-transform duration-500 hover:scale-[1.02] h-[400px]">
+                      <ImageCarousel />
                     </div>
                     
                     {/* Floating badge */}
