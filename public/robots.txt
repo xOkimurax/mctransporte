@@ -1,0 +1,66 @@
+# Robots.txt para MC Fletes y Mudanzas
+# Optimizado para SEO y rastreo eficiente
+
+# Permitir a todos los motores de búsqueda
+User-agent: *
+
+# Permitir todas las páginas principales para indexación
+Allow: /
+Allow: /servicios/
+Allow: /contacto/
+Allow: /nosotros/
+
+# Permitir recursos importantes para SEO
+Allow: /miniatura.png
+Allow: /icon.png
+Allow: /favicon.ico
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+
+# Bloquear archivos técnicos y de desarrollo
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /components/
+Disallow: /hooks/
+Disallow: /lib/
+Disallow: /utils/
+Disallow: *.json
+Disallow: *.ts
+Disallow: *.tsx
+Disallow: *.css
+Disallow: *.js
+Disallow: *.config.*
+Disallow: /vite.config.ts
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tailwind.config.ts
+Disallow: /postcss.config.js
+Disallow: /eslint.config.js
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquear bots maliciosos conocidos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap (actualizar con tu dominio real)
+# Sitemap: https://tudominio.com/sitemap.xml
+
+# Crawl-delay general para evitar sobrecarga
+Crawl-delay: 1
