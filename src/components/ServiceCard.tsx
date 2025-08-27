@@ -67,13 +67,15 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10"></div>
       
-      <div 
-        className="h-72 bg-cover bg-center transition-transform duration-700 ease-in-out"
-        style={{ 
-          backgroundImage: `url(${service.image})`,
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'
-        }}
-      ></div>
+      <div className="h-72 relative overflow-hidden">
+        <img 
+          src={service.image}
+          alt={service.alt}
+          className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+          style={{ transform: isHovered ? 'scale(1.05)' : 'scale(1)' }}
+          loading="lazy"
+        />
+      </div>
       
       <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform transition-transform duration-500 ease-in-out"
            style={{ transform: isHovered ? 'translateY(-8px)' : 'translateY(0)' }}>

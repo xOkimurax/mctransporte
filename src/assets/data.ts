@@ -10,6 +10,7 @@ export interface Service {
   description: string;
   icon: string;
   image: string;
+  alt: string;
 }
 
 export const services: Service[] = [
@@ -18,35 +19,40 @@ export const services: Service[] = [
     title: "Mudanzas Residenciales",
     description: "Ofrecemos servicios completos de mudanza para hogares, con embalaje profesional, Fletes seguro y desembalaje en el destino.",
     icon: "home",
-    image: mudanzasResidenciales
+    image: mudanzasResidenciales,
+    alt: "Mudanzas residenciales en Asunción Paraguay - Servicio profesional de mudanzas de casas"
   },
   {
     id: "Fletes-comercial",
     title: "Fletes Comercial",
     description: "Soluciones de Fletes para empresas, con manejo especializado de equipos de oficina, archivos y mobiliario comercial.",
     icon: "building-2",
-    image: fletesComercial
+    image: fletesComercial,
+    alt: "Fletes comerciales en Paraguay - Transporte profesional para empresas en Asunción"
   },
   {
     id: "logistica",
     title: "Logística y Distribución",
     description: "Servicios logísticos completos para entrega de mercancías, gestión de almacenes y distribución a nivel nacional.",
     icon: "truck",
-    image: logisticaDistribucion
+    image: logisticaDistribucion,
+    alt: "Logística y distribución Paraguay - Servicios de transporte y entrega nacional"
   },
   {
     id: "embalaje",
     title: "Embalaje Profesional",
     description: "Servicio de embalaje con materiales de alta calidad para asegurar la protección de sus pertenencias durante el traslado.",
     icon: "package",
-    image: embalajeProfesional
+    image: embalajeProfesional,
+    alt: "Embalaje profesional Paraguay - Servicio seguro de empaque para mudanzas"
   },
   {
     id: "almacenamiento",
     title: "Almacenamiento Temporal",
     description: "Espacios seguros y climatizados para el almacenamiento temporal de sus pertenencias cuando lo necesite.",
     icon: "warehouse",
-    image: almacenamientoTemporal
+    image: almacenamientoTemporal,
+    alt: "Almacenamiento temporal Paraguay - Depósitos seguros para guardar pertenencias"
   },
 ];
 

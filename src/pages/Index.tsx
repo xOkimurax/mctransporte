@@ -62,7 +62,7 @@ const ImageCarousel = () => {
         <div className="w-full h-full">
           <img
             src={transporte1}
-            alt="MC Fletes y Mudanzas 1"
+            alt="Fletes Asunción Paraguay - MC Transporte Profesional"
             className="w-full h-full object-cover"
             style={{ aspectRatio: "4/3", display: "block" }}
           />
@@ -70,7 +70,7 @@ const ImageCarousel = () => {
         <div className="w-full h-full">
           <img
             src={transporte2}
-            alt="MC Fletes y Mudanzas 2"
+            alt="Mudanzas Paraguay - Servicio Profesional Económico"
             className="w-full h-full object-cover"
             style={{ aspectRatio: "4/3", display: "block" }}
           />
@@ -87,9 +87,9 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Fletes y Mudanzas Económicas en Paraguay</title>
-        <meta name="description" content="Ofrecemos servicios de fletes y mudanzas a precios accesibles en Paraguay. Transporte económico y confiable para tus necesidades. Cotización gratuita." />
-        <meta name="keywords" content="fletes, mudanzas, transporte económico, precios accesibles, tarifas competitivas, cotización gratuita, servicio de mudanzas" />
+        <title>MC Fletes y Mudanzas - Asunción Paraguay Transporte Profesional 24hs</title>
+        <meta name="description" content="✅ Fletes Asunción Paraguay ✅ Mudanzas Residenciales y Comerciales ✅ Transporte 24hs ✅ Servicio Económico ✅ Más de 10 años de experiencia - MC Fletes" />
+        <meta name="keywords" content="fletes asuncion, mudanzas paraguay, transporte asuncion, fletes economicos, mudanzas residenciales, mudanzas comerciales, transporte profesional, fletes 24 horas, mudanzas seguras, transporte carga" />
       </Helmet>
       
       {/* Hero Section - Reconstruido para mejor centrado en móvil */}
@@ -101,11 +101,11 @@ const Index = () => {
               {/* Título y subtítulo centrados */}
               <div className="text-center w-full mb-4">
                 <h1 className="text-3xl font-bold text-mc-dark leading-tight mb-4">
-                  Fletes y Mudanzas con Profesionalismo y Seguridad
+                  MC Fletes y Mudanzas - Asunción Paraguay Servicio Profesional 24hs
                 </h1>
                 
                 <p className="text-base text-gray-600 mb-6 px-4">
-                  Servicio completo de mudanzas y Fletes para particulares y empresas en todo Paraguay.
+                  Empresa líder en fletes económicos y mudanzas seguras en Asunción Paraguay. Transporte profesional para hogares y empresas.
                 </p>
               
                 {/* Botones centrados y apilados */}
@@ -153,13 +153,13 @@ const Index = () => {
                 <div className="text-left">
                   <ScrollReveal direction="left" className="mb-4">
                     <h1 className="text-5xl font-bold text-mc-dark leading-tight">
-                      Fletes y Mudanzas con Profesionalismo y Seguridad
+                      MC Fletes y Mudanzas - Asunción Paraguay Servicio Profesional 24hs
                     </h1>
                   </ScrollReveal>
                   
                   <ScrollReveal direction="left" delay={200} className="mb-6">
                     <p className="text-lg text-gray-600">
-                      Servicio completo de mudanzas y Fletes para particulares y empresas en todo Paraguay.
+                      Empresa líder en fletes económicos y mudanzas seguras en Asunción Paraguay. Transporte profesional para hogares y empresas.
                     </p>
                   </ScrollReveal>
                   
@@ -219,7 +219,7 @@ const Index = () => {
                 ¿Por Qué Elegir <span className="text-mc-primary">MC Fletes Y Mudanzas</span>?
               </h2>
               <p className="text-gray-600 text-base md:text-lg">
-                Ofrecemos soluciones integrales adaptadas a sus necesidades específicas con los más altos estándares de calidad.
+                Líderes en fletes económicos y mudanzas seguras en Paraguay. Más de 10 años ofreciendo transporte profesional en Asunción y todo el país.
               </p>
             </div>
           </ScrollReveal>
