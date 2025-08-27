@@ -59,8 +59,8 @@ Disallow: /
 User-agent: SemrushBot
 Disallow: /
 
-# Sitemap (actualizar con tu dominio real)
-# Sitemap: https://tudominio.com/sitemap.xml
+# Sitemap principal
+Sitemap: https://mudanzasyfletesenparaguay.com/sitemap.xml
 
 # Crawl-delay general para evitar sobrecarga
 Crawl-delay: 1
